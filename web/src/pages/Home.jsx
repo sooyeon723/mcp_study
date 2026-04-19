@@ -1,4 +1,8 @@
+import { useNavigate } from 'react-router-dom'
+
 function Home() {
+  const navigate = useNavigate()
+
   return (
     <main style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '39px', width: '100%' }}>
       <div
@@ -26,6 +30,21 @@ function Home() {
       <p style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400, fontSize: '12px', color: '#636363', textAlign: 'center', width: '100%', flexShrink: 0 }}>
         Look for excitement
       </p>
+      <button
+        onClick={() => navigate('/detail')}
+        style={{
+          padding: '10px 24px',
+          fontSize: '12px',
+          cursor: 'pointer',
+          backgroundColor: '#583fac',
+          color: '#fff',
+          border: 'none',
+          borderRadius: '4px',
+          flexShrink: 0,
+        }}
+      >
+        페이지 이동
+      </button>
     </main>
   )
 }
