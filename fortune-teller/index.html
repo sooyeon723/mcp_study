@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>오늘 내 운명은?</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@latest/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+
+    <!-- Start Screen -->
+    <div id="screen-start" class="screen active">
+      <div class="start-wave">
+        <img src="https://www.figma.com/api/mcp/asset/5fb89f6b-1aaf-4eed-a978-62298eccc2f8" alt="">
+      </div>
+      <div class="start-content">
+        <div class="start-header">
+          <h1 class="title">오늘 내 운명은?</h1>
+          <p class="subtitle start-subtitle">매일 한장, 오늘의 행운을 읽어드려요.</p>
+        </div>
+        <div class="card-section">
+          <div class="card-row">
+            <div class="card" onclick="selectCard()">
+              <img src="https://www.figma.com/api/mcp/asset/df38c445-250a-458e-8352-ab6d49d7baf9" alt="카드">
+            </div>
+            <div class="card" onclick="selectCard()">
+              <img src="https://www.figma.com/api/mcp/asset/df38c445-250a-458e-8352-ab6d49d7baf9" alt="카드">
+            </div>
+            <div class="card" onclick="selectCard()">
+              <img src="https://www.figma.com/api/mcp/asset/df38c445-250a-458e-8352-ab6d49d7baf9" alt="카드">
+            </div>
+          </div>
+          <p class="card-hint">카드 하나를 선택해보세요</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Result A: 검정 고양이 -->
+    <div id="screen-result-a" class="screen result-screen">
+      <div class="result-top">
+        <h1 class="title">오늘 내 운명은?</h1>
+        <p class="subtitle result-subtitle">매일 한장, 오늘의 행운을 읽어드려요.</p>
+      </div>
+      <div class="result-card">
+        <img class="result-img" src="https://www.figma.com/api/mcp/asset/c350c9b9-3460-4071-8807-67a33edbf375" alt="검정 고양이">
+        <div class="result-text">
+          <h2>검정 고양이의 행운이 필요한 날</h2>
+          <p>오늘은 주변을 더 유심히 살펴보세요!</p>
+        </div>
+      </div>
+      <button class="btn-retry" onclick="goBack()">다시 선택하기</button>
+    </div>
+
+    <!-- Result B: 흐린 날 -->
+    <div id="screen-result-b" class="screen result-screen">
+      <div class="result-top">
+        <h1 class="title">오늘 내 운명은?</h1>
+        <p class="subtitle result-subtitle">매일 한장, 오늘의 행운을 읽어드려요.</p>
+      </div>
+      <div class="result-card">
+        <img class="result-img" src="https://www.figma.com/api/mcp/asset/aa30a4d4-070b-4611-9aa2-cac02ee50f1a" alt="흐린 날">
+        <div class="result-text">
+          <h2>앞날이 조금 흐린걸 어쩌죠</h2>
+          <p>꿋꿋하게 밀고나가는 힘이 필요한 하루에요!</p>
+        </div>
+      </div>
+      <button class="btn-retry" onclick="goBack()">다시 선택하기</button>
+    </div>
+
+    <!-- Result C: 저런... -->
+    <div id="screen-result-c" class="screen result-screen">
+      <div class="result-top">
+        <h1 class="title">오늘 내 운명은?</h1>
+        <p class="subtitle result-subtitle">매일 한장, 오늘의 행운을 읽어드려요.</p>
+      </div>
+      <div class="result-card">
+        <img class="result-img" src="https://www.figma.com/api/mcp/asset/15c964c0-5d26-47d0-b1df-1fe16e89d972" alt="저런...">
+        <div class="result-text">
+          <h2>저런...</h2>
+          <p>누구에게 원한을 샀나요? 도울 수 없어 안타깝군요^ㅠ</p>
+        </div>
+      </div>
+      <button class="btn-retry" onclick="goBack()">그럴 리가 없어</button>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
