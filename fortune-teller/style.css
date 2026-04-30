@@ -1,0 +1,241 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', sans-serif;
+  background: #c8bfd8;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.app {
+  width: 100%;
+  max-width: 393px;
+  position: relative;
+  background: #f9f9f9;
+}
+
+/* ===== SCREENS ===== */
+.screen {
+  display: none;
+  width: 100%;
+  min-height: 852px;
+  position: relative;
+  overflow: hidden;
+}
+
+.screen.active {
+  display: block;
+}
+
+/* ===== START SCREEN ===== */
+#screen-start {
+  background-color: #f9f9f9;
+}
+
+.start-wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.start-wave img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.start-content {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  right: 0;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 160px;
+  z-index: 1;
+}
+
+.start-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+}
+
+/* ===== SHARED TEXT ===== */
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #141414;
+  line-height: normal;
+}
+
+.subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.start-subtitle {
+  color: #555;
+}
+
+/* ===== CARDS ===== */
+.card-section {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.card-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.card {
+  flex: 1;
+  aspect-ratio: 1 / 1;
+  background: #ddd;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.card:active {
+  transform: scale(0.95);
+}
+
+.card img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.card-hint {
+  font-size: 16px;
+  font-weight: 400;
+  color: #555;
+  text-align: center;
+  line-height: normal;
+}
+
+/* ===== RESULT SCREENS ===== */
+.result-screen {
+  background: radial-gradient(
+    ellipse 100% 65% at 50% 50%,
+    rgba(230, 201, 255, 1) 0%,
+    rgba(249, 249, 249, 1) 100%
+  );
+}
+
+.result-top {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  right: 0;
+  padding: 0 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.result-subtitle {
+  color: #747474;
+}
+
+.result-card {
+  position: absolute;
+  top: 296px;
+  left: 20px;
+  right: 20px;
+  height: 353px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+}
+
+.result-img {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.result-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+  width: 100%;
+}
+
+.result-text h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #141414;
+  line-height: normal;
+}
+
+.result-text p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #747474;
+  line-height: normal;
+}
+
+/* ===== RETRY BUTTON ===== */
+.btn-retry {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #6d5c8e;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Pretendard', -apple-system, sans-serif;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.btn-retry:hover {
+  background: #5c4d7a;
+}
+
+.btn-retry:active {
+  transform: translateX(-50%) scale(0.95);
+}
